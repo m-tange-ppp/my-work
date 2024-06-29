@@ -27,7 +27,7 @@ img {
 .wrapper {
     max-width: 960px;
     padding: 0 4%;
-    margin: 0 auto;
+    margin: 0 auto 130px;
 }
 .section-title {
     text-align: center;
@@ -53,20 +53,26 @@ img {
 }
 #header ul {
     display: flex;
+    padding: 10px 0;
 }
 #header li {
     margin-left: 30px;
+}
+#header li:first-child {
+    margin-left: 0;
 }
 #header li img {
     width: 20px;
 }
 
 /* Mainvisual */
+#mainvisual {
+    margin-bottom: 80px;
+}
 #mainvisual img {
-    width: 100vw;
+    width: 100%;
     height: 420px;
     object-fit: cover;
-    margin-bottom: 85px;
 }
 
 /* About */
@@ -82,7 +88,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 130px;
+    margin-bottom: 50px;
 }
 #works li {
     width: 31%;
@@ -94,7 +100,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     border-top: solid 1px #C8C8C8;
-    margin-bottom: 130px;
+    margin-bottom: 70px;
 }
 #news dt {
     width: 20%;
@@ -132,7 +138,7 @@ img {
     height: 10rem;
 }
 #contact .button {
-    margin: 0 auto 130px;
+    margin: 0 auto;
     text-align: center;
 }
 #contact .button input {
@@ -140,9 +146,74 @@ img {
     height: 50px;
     background-color: #24292E;
     color: #FFFFFF;
+    font-size: 0.9rem;
 }
 #contact .button input:hover {
     background-color: #FFFFFF;
     color: #24292E;
     border: solid 1px #24292E;
+}
+
+/* Footer */
+#footer p {
+    display: block;
+    text-align: center;
+    background-color: #24292E;
+    color: #FFFFFF;
+    font-size: 0.5rem;
+    padding: 10px;
+}
+
+/* SP */
+@media screen and (max-width: 600px) {
+    .wrapper {
+        margin-bottom: 70px;
+    }
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    #header {
+        max-width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+    #header .site-title {
+        margin-top: 20px;
+    }
+    #header li {
+        font-size: 0.8rem;
+        margin-left: 20px;
+    }
+
+    #works ul {
+        flex-direction: column;
+        margin-bottom: 70px;
+    }
+    #works li {
+        width: 100%;
+    }
+
+    #news dl {
+        flex-direction: column;
+    }
+    #news dt {
+        width: 100%;
+        border-bottom: none;
+        padding: 15px 15px 0;
+    }
+    #news dd {
+        width: 100%;
+        padding: 0px 15px 15px;
+    }
+
+    #contact dl {
+        flex-direction: column;
+    }
+    #contact dt {
+        width: 100%;
+    }
+    #contact dd {
+        width: 100%;
+    }
 }
